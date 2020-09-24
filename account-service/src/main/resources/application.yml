@@ -1,0 +1,9 @@
+#String Boot配置文件
+server:
+  port : 8081
+
+sleep: 0
+
+spring:
+  profiles:
+    active: dev

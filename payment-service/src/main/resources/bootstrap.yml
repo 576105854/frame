@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: payment-service
+  profiles:
+    active: dev
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 81.68.234.212:8848
+      config:
+        server-addr: 81.68.234.212:8848
+        file-extension: yml
+    sentinel:
+      datasource:
+        ds1:
+          nacos:
+            server-addr: 81.68.234.212:8848
+            dataId: ${spring.application.name}-flow-rules
+            data-type: json
+            rule-type: flow
