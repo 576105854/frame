@@ -1,6 +1,6 @@
 #String Boot配置文件
 server:
-  port : 8081
+  port : 8082
 
 sleep: 0
 

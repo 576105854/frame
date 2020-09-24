@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: gateway
+  cloud:
+    nacos:
+      config:
+        server-addr: 81.68.234.212:8848
+      discovery:
+        server-addr: 81.68.234.212:8848
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+      routes:
+        - id: payment-router
+          uri: lb://payment-service
+          predicates:
+            - Path=/pay/**
+        - id: account-router
+          uri: lb://account-service
+          predicates:
+            - Path=/acc/**

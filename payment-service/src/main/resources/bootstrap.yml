@@ -18,3 +18,6 @@ spring:
             dataId: ${spring.application.name}-flow-rules
             data-type: json
             rule-type: flow
+      eager: true
+      transport:
+        dashboard: 81.68.234.212:8858
