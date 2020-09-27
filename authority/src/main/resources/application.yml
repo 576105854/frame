@@ -1,12 +1,6 @@
-#String Boot配置文件
 server:
-  port : 8081
-
-sleep: 0
-
+  port: 8083
 spring:
-  profiles:
-    active: dev
   redis:
     host: 81.68.234.212
     port: 6379 #Redis服务器连接端口
@@ -26,10 +20,10 @@ spring:
 
 mybatis:
   mapper-locations: classpath*:mapping/*Mapper.xml
-#security:
-#  oauth2:
-#    client:
-#      client-id: oauth
-#      client-secret: oauth
-#    resource:
-#      token-info-uri: http://localhost:8083/oauth/check_token
+
+system:
+  #客户端配置
+  client:
+    clients[0]:
+      clientId: oauth
+      clientSecret: oauth

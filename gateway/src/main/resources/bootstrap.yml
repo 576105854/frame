@@ -20,3 +20,7 @@ spring:
           uri: lb://account-service
           predicates:
             - Path=/acc/**
+        - id: authority-router
+          uri: lb://authority
+          predicates:
+            - Path=/oauth/**
